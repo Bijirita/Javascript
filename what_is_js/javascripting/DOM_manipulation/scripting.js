@@ -9,9 +9,6 @@ var text = document.createTextNode(' - the premier source for web development kn
 var linkPara = document.querySelector('p');
 linkPara.appendChild(text);
 sect.appendChild(linkPara);
-// linkPara.parentNode.removeChild(linkPara);
+linkPara.parentNode.removeChild(linkPara);
 
 
-
-
-para.setAttribute('class', 'highlight');
