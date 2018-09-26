@@ -25,10 +25,13 @@ function listitem (b){
     unorgList.appendChild(li);
     // deleteButton.onclick = deleteItem;
 
-    deleteShitWhenIClick(deleteButton)
+deleteShitWhenIClick(deleteButton)
 
 
 
+    function deleteShitWhenIClick(bigOlButton) {
+        bigOlButton.onclick = deleteItem;
+    }
     
     // // var item = document.createElement('p');
     // item.textContent = addItem.value;
@@ -38,9 +41,6 @@ function listitem (b){
     
 }
 
-function deleteShitWhenIClick(bigOlButton) {
-    bigOlButton.onclick = deleteItem;
-}
 
 function deleteItem (e){
          var li = document.querySelector('li');
