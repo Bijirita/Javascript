@@ -6,7 +6,7 @@ addButton.onclick = listitem;
 var deleteButton = document.querySelectorAll('li');
 console.log(deleteButton);
 deleteButton.textContent = 'delete';
-span.textContent = item;
+// span.textContent = item;
 // function ooboo (take, takea, takeathing) {
 //     console.log(take + takea + takeathing);
 // }
@@ -14,7 +14,7 @@ span.textContent = item;
 function listitem (b){
     var item = addItem.value;
     console.log(item);
-    addItem.value = '';
+   addItem.value = ''; 
     var li = document.createElement('li');
     var span = document.createElement('span');
     var deleteButton = document.createElement('Button');
@@ -24,14 +24,14 @@ function listitem (b){
     span.textContent = item;
     unorgList.appendChild(li);
     // deleteButton.onclick = deleteItem;
+    
+    deleteShitWhenIClick(deleteButton);
+    // deleteShitWhenIClick(addButton)
+    
 
-deleteShitWhenIClick(deleteButton)
 
 
 
-    function deleteShitWhenIClick(bigOlButton) {
-        bigOlButton.onclick = deleteItem;
-    }
     
     // // var item = document.createElement('p');
     // item.textContent = addItem.value;
@@ -39,6 +39,12 @@ deleteShitWhenIClick(deleteButton)
     // deleteButton.style.marginLeft = "100px";
     // return unorgList.appendChild(item);
     
+}
+
+
+function deleteShitWhenIClick(thisButton) {
+    
+    thisButton.onclick =deleteItem;
 }
 
 
